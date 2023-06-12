@@ -1,0 +1,11 @@
+@import "typography";
+@import "variables";
+@import "mixins";
+
+// HOME PAGE
+.homeMain {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}

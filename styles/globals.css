@@ -11,8 +11,7 @@ font-family: 'Libre Baskerville', serif; */
 
 html,
 body {
-	/* Need to remove this for Postion: sticky; to work on recipe page */
-	/* overflow-x: hidden; */
+	overflow-x: hidden;
 	font-family: "Lato", sans-serif;
 }
 
