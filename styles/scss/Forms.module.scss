@@ -1,0 +1,56 @@
+@import "typography";
+@import "variables";
+@import "mixins";
+
+// ADD/UPDATE INGREDIENT FORM
+.addIngreMain {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	width: 100%;
+	max-width: 35rem;
+	background-color: $form-bg;
+	padding: 2rem;
+	// border: 1px solid $neutral-border;
+	border-radius: 1rem;
+	box-shadow: $box-shadow-5;
+
+	.addIngreTitle {
+		@include H2;
+
+		@media screen and (max-width: 32.75rem) {
+			@include H4;
+		}
+	}
+	.addIngreCenterCols {
+		@include SuperCenter();
+		justify-content: space-between;
+		height: 5.875rem;
+		width: 100%;
+		@media screen and (max-width: 32.75rem) {
+			flex-direction: column;
+			height: min-content;
+		}
+
+		.addIngreAmount {
+			.addIngreColTitle {
+				@include P1;
+			}
+			.addIngreChecks {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 2rem;
+			}
+		}
+		.addIngreLocation {
+			@include SuperCenter();
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+			@include P1;
+		}
+	}
+}

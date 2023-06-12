@@ -1,0 +1,80 @@
+{
+  "ingredients": [
+    {
+      "name": "Broccoli",
+      "location": "Refrigerator",
+      "status": "Fresh"
+    },
+    {
+      "name": "Rice",
+      "location": "Pantry",
+      "status": "Stored"
+    },
+    {
+      "name": "Bell Pepper",
+      "location": "Refrigerator",
+      "status": "Fresh"
+    },
+    {
+      "name": "Onion",
+      "location": "Pantry",
+      "status": "Stored"
+    },
+    {
+      "name": "Garlic",
+      "location": "Pantry",
+      "status": "Stored"
+    },
+    {
+      "name": "Tomato",
+      "location": "Refrigerator",
+      "status": "Fresh"
+    },
+    {
+      "name": "Tofu",
+      "location": "Refrigerator",
+      "status": "Fresh"
+    },
+    {
+      "name": "Soy Sauce",
+      "location": "Pantry",
+      "status": "Stored"
+    },
+    {
+      "name": "Lemon",
+      "location": "Refrigerator",
+      "status": "Fresh"
+    },
+    {
+      "name": "Black Beans",
+      "location": "Pantry",
+      "status": "Stored"
+    }
+  ],
+  "profile": {
+    "spiceCabinet": ["garlic powder", "ginger", "oregano"],
+    "favoriteCuisines": [
+      "Italian",
+      "Mexican",
+      "Japanese"
+    ],
+    "nutrientPreferences": [
+      "low carb",
+      "high protein",
+      "high vitamin C"
+    ],
+    "experienceLevel": "beginner",
+    "cookingEquipment": [
+      "instant pot",
+      "microwave",
+      "oven"
+    ]
+  },
+  "recipeParams": {
+    "mealType": "dinner",
+    "maxDuration": "15 to 30 minutes",
+    "numberOfServings": 4,
+    "childFriendly": true,
+    "spicy": false
+  }
+}

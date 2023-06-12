@@ -1,0 +1,30 @@
+@import "variables";
+@import "typography";
+
+// Buttons
+@mixin PrimaryChip() {
+	@include ButtonText;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	width: max-content;
+
+	padding: 1rem 1.5rem;
+	color: $neutral-white;
+	background-color: $primary-main;
+	border-radius: 1rem;
+	border: none;
+	&:hover,
+	&:focus {
+		box-shadow: $box-shadow-5;
+		background-color: $primary-darker;
+		transition: $trans-basic;
+		cursor: pointer;
+	}
+	&:disabled {
+		background-color: $status-grey;
+		transition: $trans-basic;
+		cursor: default;
+	}
+}

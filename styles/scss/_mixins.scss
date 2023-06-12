@@ -1,0 +1,96 @@
+@import "variables";
+
+// USEFUL GLOBALLY
+@mixin SuperCenter() {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+// PAGE MAINS
+@mixin DefaultPage() {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	width: calc(100vw - 1rem);
+	padding-top: 6rem;
+
+	font-size: 2rem;
+	text-align: center;
+}
+
+// BUTTONS
+@mixin BtnBase4040($color) {
+	height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 1rem;
+
+	button {
+		height: 100%;
+		width: 100%;
+		border-radius: 0.5rem;
+		background-color: $color;
+		border: none;
+
+		&:hover {
+			box-shadow: $box-shadow-5;
+			transition: $trans-basic;
+			cursor: pointer;
+		}
+	}
+}
+@mixin DeleteBtn() {
+	height: 2.5rem;
+	width: 2.5rem;
+	border-radius: 1rem;
+
+	button {
+		@include SuperCenter();
+		height: 100%;
+		width: 100%;
+		border-radius: 0.5rem;
+		background-color: $secondary-lightest;
+		border: none;
+
+		&:hover {
+			box-shadow: $box-shadow-5;
+			transition: $trans-basic;
+			cursor: pointer;
+		}
+	}
+}
+
+// LINKS
+@mixin MenuLink() {
+	padding: 0.75rem 1rem 0.625rem 1rem;
+	text-decoration: none;
+	color: $primary-darker;
+	border-bottom: 2px solid $secondary-lightest;
+	&:hover {
+		background-color: $primary-main;
+		color: $neutral-white;
+		border-bottom: 2px solid $primary-main;
+	}
+	&:focus {
+		color: $secondary-darker;
+		border-bottom: 2px solid $primary-main;
+	}
+}
+@mixin MenuIcon() {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 999px;
+	padding: 0;
+	width: 2.5rem;
+	height: 2.5rem;
+	border: none;
+	&:hover {
+		border: none;
+	}
+	&:focus {
+		border: none;
+	}
+}

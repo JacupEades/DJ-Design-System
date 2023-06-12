@@ -1,0 +1,38 @@
+// Real
+$primary-darker: #9d340b;
+$primary-main: #f27340;
+$primary-lightest: #f6ab8e;
+$secondary-darker: #005b94;
+$secondary-main: #009afa;
+$secondary-lightest: #99d8ff;
+$page-background: #fffbf4;
+$neutral-white: #ffffff;
+$neutral-border: #bebfba6c;
+$neutral-text: #000000;
+$neutral-text-secondary: #6b6b6b;
+$inactvie-grey: #eeeeee;
+$inactvie-grey-hover: #dddddd;
+$form-bg: #f7f7f7;
+
+// Hover States
+$secondary-darker-hover: #00558a;
+
+// Transitons
+$trans-basic: all 0.25s;
+
+// Overlay
+$overlay-main: #00000088;
+
+// Box-Shadows from:
+// https://getcssscan.com/css-box-shadow-examples
+$box-shadow-5: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+$box-shadow-15: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+	rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+	rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+$box-shadow-62: rgba(0, 0, 0, 0.096) 3px 3px 6px 0px inset,
+	rgba(56, 56, 56, 0.096) -3px -3px 6px 1px inset;
+
+// Made up Colors
+$status-green: #6deb54;
+$status-red: #d32c2c;
+$status-grey: #666161;

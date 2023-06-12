@@ -1,0 +1,327 @@
+@import "typography";
+@import "variables";
+@import "mixins";
+@import "buttons";
+
+// LAYOUT HEADER NAVIGATION
+.headerMain {
+	@include P1;
+	position: fixed;
+	top: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	width: 100vw;
+	height: 3.5rem;
+	padding: 0 2rem 0 1rem;
+	color: $neutral-text;
+	background-color: $primary-main;
+	z-index: 10;
+
+	.headerLink {
+		padding: 1rem 1rem;
+		transition: $trans-basic;
+		&:hover {
+			color: $neutral-white;
+			background-color: $primary-darker;
+		}
+	}
+	@media screen and (max-width: 32.75rem) {
+		@include P2;
+		justify-content: center;
+		svg {
+			display: none;
+		}
+		div {
+			&:last-child {
+				display: none;
+			}
+		}
+	}
+}
+// BUTTON INPUT
+.formSubmitBtn {
+	@include H6;
+	@include SuperCenter();
+	height: 2.5rem;
+	width: 2.5rem;
+	background-color: $secondary-darker;
+	color: $neutral-white;
+	border: none;
+	border-radius: 0.5rem;
+	&:hover {
+		cursor: pointer;
+	}
+	&:disabled {
+		cursor: default;
+		background-color: $neutral-border;
+	}
+}
+.recipeBtn {
+	@include PrimaryButton();
+}
+.generateRecipe {
+	@include SecondaryButton();
+	height: 2.5rem;
+	background-color: $primary-darker;
+	color: $neutral-white;
+	&:hover {
+		border: none;
+		color: $neutral-text;
+	}
+}
+
+// TEXTFIELD
+.textFieldMain {
+	position: relative;
+	width: 100%;
+	height: 65px;
+	border-radius: 10px;
+	box-shadow: $box-shadow-62;
+
+	[type="text"] {
+		height: 65px;
+		color: $neutral-text;
+		font-size: 18px;
+		letter-spacing: 2px;
+		padding: 0px 45px 0px 18px;
+		background: transparent;
+
+		&::placeholder {
+			color: rgba(34, 34, 34, 0.55);
+		}
+	}
+	// .textFieldLabel {
+	// }
+	.textFieldInput {
+		@include P1;
+		width: 100%;
+		padding: 0 0.75rem;
+		outline: none;
+		border: 0;
+	}
+}
+// CHECKBOX FORM INPUT
+.checkBoxMain {
+	@include SuperCenter();
+	flex-direction: column;
+	.checkBoxLabel {
+		@include P2;
+	}
+	.checkBoxMainGreen {
+		@include BtnBase4040($status-green);
+	}
+	.checkBoxMainRed {
+		@include BtnBase4040($status-red);
+	}
+	.checkBoxMainGrey {
+		@include BtnBase4040($status-grey);
+	}
+}
+// DROPDOWN FORM INPUT
+.dropdownMain {
+	display: flex;
+	flex-direction: column;
+	width: 12rem;
+
+	.dropdownToggle {
+		@include H6;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.75rem;
+
+		height: 2.5rem;
+		width: 100%;
+		color: $neutral-white;
+		background-color: $secondary-darker;
+		border: none;
+
+		&:hover {
+			background-color: $secondary-darker-hover;
+			cursor: pointer;
+		}
+	}
+	ul {
+		@include P1;
+		position: absolute;
+		margin-top: 2.5rem;
+		width: 12rem;
+		// maxHeight: isOpen ? `${options.length * 40}px` : "0",
+		transition: max-height 0.3s ease;
+		overflow: hidden;
+		border-radius: 0 0 0.5rem 0.5rem;
+		box-shadow: $box-shadow-15;
+
+		li {
+			padding: 0.5rem;
+			list-style: none;
+			background-color: $secondary-lightest;
+
+			&:hover {
+				background-color: $secondary-main;
+				transition: $trans-basic;
+				cursor: pointer;
+			}
+		}
+	}
+}
+// INGREDIENT LIST
+.ingredientListMain {
+	@include SuperCenter();
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 35rem;
+	.ingredientListHeading {
+		@include H6;
+		display: grid;
+		grid-template-columns: 2.5rem 1fr 5rem 5rem 3rem;
+		justify-content: space-between;
+		width: 100%;
+		padding: 0.75rem 1rem;
+		background-color: $primary-main;
+		color: $neutral-white;
+
+		p::before {
+			content: attr(data-label);
+		}
+
+		@media screen and (max-width: 32.75rem) {
+			grid-template-columns: 2.5rem 1fr 2rem 2rem 2rem;
+
+			p:nth-child(3)::before {
+				content: "Loc";
+			}
+
+			p:nth-child(4)::before {
+				content: "Amt";
+			}
+
+			p:nth-child(5)::before {
+				content: "Rm";
+			}
+		}
+
+		border: 2px solid $neutral-border;
+		border-top: none;
+		&:first-child {
+			border: 2px solid $neutral-border;
+			border-radius: 0.5rem 0.5rem 0 0;
+		}
+		&:last-child {
+			border-radius: 0 0 0.5rem 0.5rem;
+		}
+	}
+	.ingredientListItem {
+		@include P1;
+		display: grid;
+		grid-template-columns: 2.5rem 1fr 6rem 4rem 3rem;
+		align-items: center;
+		width: 100%;
+		padding: 0.75rem 1rem;
+
+		border: 2px solid $neutral-border;
+		border-top: none;
+		@media screen and (max-width: 32.75rem) {
+			grid-template-columns: 2.5rem 1fr 2rem 2.2rem 2rem;
+		}
+		.moveIndexBtnMain {
+			position: relative;
+			top: 0;
+			button {
+				position: absolute;
+				left: -1rem;
+				height: 2rem;
+				width: 40px;
+				border: none;
+				border-right: 1px solid $neutral-border;
+				background-color: $inactvie-grey;
+				&:hover {
+					background-color: $inactvie-grey-hover;
+					cursor: pointer;
+				}
+			}
+			.moveIndexUp {
+				top: -2rem;
+				border-bottom: 1px solid $neutral-border;
+			}
+			.moveIndexDown {
+				bottom: -2rem;
+			}
+			@media screen and (max-width: 32.75rem) {
+				button {
+					height: 1.8125rem;
+				}
+				.moveIndexUp {
+					top: -1.75rem;
+				}
+				.moveIndexDown {
+					bottom: -1.75rem;
+				}
+			}
+		}
+		.ingredientListName {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			@media screen and (max-width: 32.75rem) {
+			}
+		}
+		.ingredientListLocation {
+			@include SuperCenter;
+
+			@media screen and (max-width: 32.75rem) {
+				p {
+					display: none;
+				}
+			}
+		}
+		&:last-child {
+			border-radius: 0 0 0.5rem 0.5rem;
+		}
+		.statusPlenty {
+			@include BtnBase4040($status-green);
+			display: flex;
+			justify-self: center;
+			@media screen and (max-width: 32.75rem) {
+				height: 2rem;
+				width: 2rem;
+			}
+		}
+		.statusLow {
+			@include BtnBase4040($status-red);
+			display: flex;
+			justify-self: center;
+			@media screen and (max-width: 32.75rem) {
+				height: 2rem;
+				width: 2rem;
+			}
+		}
+		.statusInactive {
+			@include BtnBase4040($status-grey);
+			display: flex;
+			justify-self: center;
+			@media screen and (max-width: 32.75rem) {
+				height: 2rem;
+				width: 2rem;
+			}
+		}
+		.ingredientListDeleteBtn {
+			@include DeleteBtn();
+			display: flex;
+			justify-self: center;
+			@media screen and (max-width: 32.75rem) {
+				height: 2rem;
+				width: 2rem;
+			}
+		}
+		.moveIndexInactive {
+			display: none;
+		}
+	}
+	.inactive {
+		background-color: $inactvie-grey;
+	}
+}

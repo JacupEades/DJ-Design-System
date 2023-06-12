@@ -1,0 +1,39 @@
+@import "variables";
+
+// font-family: 'Lato', sans-serif;
+// font-family: 'Libre Baskerville', serif;
+// font: font-style font-variant font-weight font-size/line-height font-family;
+
+// HEADINGS
+@mixin H1() {
+	font: normal normal 400 3rem/3.75rem "Libre Baskerville", serif;
+}
+@mixin H2() {
+	font: normal normal 400 2rem/2.5rem "Libre Baskerville", serif;
+}
+@mixin H4() {
+	font: normal normal 700 1.5rem/1.875rem "Libre Baskerville", serif;
+}
+@mixin H5() {
+	font: normal normal 700 1.25rem/1.5625rem "Libre Baskerville", serif;
+}
+@mixin H6() {
+	font: normal normal 700 1rem/150% "Lato", sans-serif;
+}
+
+// BODY
+@mixin P1() {
+	font: normal normal 400 1.25rem/150% "Lato", sans-serif;
+}
+@mixin P2() {
+	font: normal normal 400 1rem/150% "Lato", sans-serif;
+}
+@mixin P3() {
+	font: normal normal 400 0.875rem/150% "Lato", sans-serif;
+}
+@mixin P4() {
+	font: normal normal 400 0.875rem/150% "Lato", sans-serif;
+}
+@mixin ButtonText() {
+	font: normal normal 700 1rem/150% "Libre Baskerville", serif;
+}
